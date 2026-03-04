@@ -1,0 +1,154 @@
+/*cascata - ereditarietà - specificità*/
+/*ereditano tutto che c'è nel body*/
+body{
+    padding: 10px;
+    text-align: justify;
+}
+/* il primo selettore - titolo - id superiore a classe*/
+#titolo{
+    color: rgb(255, 0, 191);
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+h1{
+    color: rgb(0, 183, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+/* Selettore universale - resetta tutti gli elementi*/
+*{
+    /* Seleziona ogni elemento della pagina*/
+}
+
+/* Selettore di tag - stilare tutti gli elementi del tipo specificato*/
+h1{
+    /* Tutti gli h1*/
+}
+p{
+    /* Tutti i paragrafi*/
+}
+div{
+    /* Tutti i div*/
+}
+
+/* Selettori di classe - elementi con class="nomeclasse"*/
+.header{
+    /* Elementi con classe="header"*/
+}
+.button{
+    /* Elementi con class="button "*/
+}
+.text-large{
+    /* Elementi con class="text-large"*/
+}
+
+/* Selettori di ID - elemento con nome id="nome id" (unico)*/
+#titolo{
+    /* Elemento con id="titolo"*/
+}
+#footer{
+    /* Elemento con id="footer"*/
+}
+
+/* Selettori di attributo - basati su attributi HTML*/
+[type]{
+    /* Elementi che hanno l'attributo "type" */
+}
+[type = "text"]{
+    /* Elementi con type="text" */
+}
+[href^="https"]{
+    /* Link con href="https" */
+}
+[src$= ".jpg"]{
+    /* Immagini che finiscono con ".jpg" */
+}
+[class*= "btn"]{
+    /* Elementi con "btn" nella classe */
+}
+[title~= "importante"]{
+    /* Elementi con "importante" come parola separata nel title */
+}
+[lang |= "text"]{
+    /* Elementi con lang="en" lang="en-US", etc... */
+}
+
+/* Combinatore discendente (spazio) - elemento dentro un altro*/
+.container p{
+    /* Paragrafi dentro elementi con class="container"*/
+}
+#header nav{
+    /* Elementi nav detro l'elemento con id="header"*/
+}
+
+/* Combinatore figlio diretto (>) - figlio diretto*/
+.menu > li{
+    /* Li che sono figli diretti di elementi con class="menu" */
+}
+article > h2{
+    /* H2 che sono figli diretti di article */
+}
+
+/* Combinatore fratello adiacente (+) - elemento subito dopo */
+h2 + p{
+    /* Paragrafo che segue immediatamente un h2*/
+}
+.image + .caption{
+    /* Elemento con classe="caption" subito dopo class="image" */
+}
+
+/* Combinatore fratelli generali (~) - fratelli che seguono */
+h2 ~ p{
+    /* Tutti i paragrafi fratelli che seguono un h2*/
+}
+.featured ~ .related{
+    /* Elementi con class="related" fratelli di class="featured"*/
+}
+
+/* Raggruppamento (,) - stessi stili per più selettori */
+h1,h2,h3{
+    /* Tutti i titoli h1, h2, h3*/
+}
+.button,.link,.action{
+    /* Elementi con una di queste classi*/
+}
+
+/* Selettori concatenati - stesso elemento con più criteri */
+p.highlight{
+    /* Paragrafi con class="highlight"*/
+}
+div#container.main{
+    /* div con id="container" e class="main"*/
+}
+input[type="text"].required{
+    /*input di tipo text con class="required"*/
+}
+
+/* Combinazioni complesse - selettori avanzati */
+.sidebar .widget h3{
+    /* h3 dentro widget dentro sidebar*/
+}
+#main > section .article-title{
+    /* Titolo articolo in section figlie dirette di id="main"*/
+}
+.menu li:not(.disable){
+    /*li del menù non ha classi menù*/
+}
+.card .header + .content{
+    /*Content che segue direttamente header dentro card*/
+}
+
+/* Selettori specifici per form*/
+form input[required]{
+    /*Input obbligstori dentro form*/
+}
+label + input[type="email"]{
+    /*Input email che seguono una label*/
+}
+.form-group input:not([type="hidden"]){
+    /*Input visibili dentro form-group*/
+}
