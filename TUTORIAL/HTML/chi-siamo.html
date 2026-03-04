@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi siamo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="tutorial.html" target="_blank">Ritorna al tutorial</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contatti.html" target="_blank">Contatti</a>
+            <h2>FORM</h2>
+        </nav>
+    </header>
+    
+    <form action="registrazione.php" method="post">
+        <fieldset>
+            <legend>Dati personali</legend>
+            <label for="nome">Nome</label>
+            <input type="text" name="Nome" placeholder="Inserisci il Nome" required id="nome">
+            <label for="cognome">Cognome</label>
+            <input type="text" name="Cognome" placeholder="Inserisci il Cognome" required id="cognome">
+
+            <label for="email">Email</label>
+            <input type="email" name="Email" placeholder="email@esempio.com" required id="email">
+            <label for="password">Password</label>
+            <input type="password" name="Password" placeholder="Inserisci Password" required id="password">
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" name="Telefono" placeholder="+39 123 456 7890" id="telefono">
+            <label for="sito">Sito personale</label>
+            <input type="url" name="Sito" placeholder="https://miosito.com" id="sito">
+
+            <label for="eta">Età</label>
+            <input type="number" name="Eta" min="18" max="99" step="1" id="eta" placeholder="18">
+            <br>
+        
+            <label for="appuntamento">Data e Ora dell'appuntamento</label>
+            <!--<input type="date" name="Appuntamento" min="1900-01-01" max="2032-12-31" id="appuntamento">
+            <input type="time" name="Orario" min="09:00" max="18:00">-->
+            <input type="datetime-local" name="appuntamento" id="appuntamento">
+
+            <label for="nascita">Data di Nascita</label>
+            <input type="date" name="Nascita" min="1900-01-01" max="2032-12-31" id="nascita">
+            <!--<input type="month" name="Mese" id="nascita">
+            <input type="week" name="Settimana" id="nascita">-->
+            
+            <label for="genere">Genere</label>
+            <select name="genere" id="genere">
+                <option value="">Seleziona un genere</option>
+                <option value="maschio">Maschio</option>
+                <option value="femmina">Femmina</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Corso di interesse</legend>
+            
+            <label for="esperienza">Livello di esperienza</label>
+            <input type="radio" name="genere" value="maschio" id="esperienza">
+            <label for="esperienza">Maschio</label>
+        
+            <input type="radio" name="genere" value="femmina" id="esperienza">
+            <label for="esperienza">Femmina</label>
+
+            <input type="search" name="cerca" placeholder="Cerca nel sito...">
+            <label for="colore">Colore preferito</label>
+            <input type="color" name="colore_preferito" value="#ff0000" id="colore">
+            <input type="range" name="volume" min="0" max="100" value="50">
+            <input type="file" name="curriculum" accept="pdf">
+            <input type="file" name="foto[]" multiple accept="image/*">
+            <input type="hidden" name="user_id" value="123">
+
+            <input type="checkbox" name="newsletter" value="si" id="news">
+            <label for="news">Iscrivimi alla newsletter</label>
+
+            <textarea 
+                name="messaggio" 
+                id="messaggio"
+                rows="5"
+                cols="50"
+                placeholder="Scrivi qui il tuo messaggio"
+                maxlength="500"
+            ></textarea>
+
+            <label for="linguaggi">Tecnologie di interesse(ctrl per multiple)</label>
+            <select name="linguaggi[]" id="linguaggi" multiple size="5">
+                <option value="">Seleziona un linguaggio</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Campi fieldset</legend>
+            <label for="regione">Regione</label>
+            <select name="regione" id="regione">
+                <option value="">Seleziona una città</option>
+                <optgroup label="Nord">
+                    <option value="lombardia">Lombardia</option>  
+                    <option value="piemonte">Piemonte</option>
+                    <option value="veneto">Veneto</option>
+                </optgroup>
+
+                <optgroup label="Centro">
+                    <option value="lazio">Lazio</option>
+                    <option value="umbria">Umbria</option>
+                </optgroup>
+
+                <optgroup label="Sud">
+                    <option value="campania">Campania</option>
+                    <option value="calabria">Calabria</option>
+                    <option value="sicilia">Sicilia</option>
+                </optgroup>
+            </select>
+
+            <button type="submit">Invia</button>
+            <button type="reset">Cancella tutto</button>
+        </fieldset>
+    </form>
+</body>
+</html>
