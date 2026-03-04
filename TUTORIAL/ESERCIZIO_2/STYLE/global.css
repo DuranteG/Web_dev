@@ -1,0 +1,67 @@
+/* STATI DI INTERAZIONE - passaggio mouse, click, focus*/
+a:hover{
+    color: brown;
+}
+button:active{
+    background-color: chartreuse;
+}
+input:focus{
+    border: 3px solid green;
+}
+
+/* STATI FORM - disabilitato, validazione*/
+input:disabled{
+    opacity: 0.5;
+}
+input:valid{
+    border-color: green;
+}
+input:invalid{
+    border-color: red;
+}
+
+/* POSIZIONI - primo, ultimo figlio*/
+li:first-child{
+    font-weight: bold;
+}
+li:last-child{
+    border-bottom: none;
+}
+
+/* NTH-CHILD - pari,dispari, ogni 3°*/
+li:nth-child(odd){
+    background: lightgray;
+}
+li:nth-child(even){
+    background: white;
+}
+li:nth-child(3n){
+    color: blue;
+}
+
+/* PSEUDO ELEMENTI - contenuto virtuale*/
+.container h1::before{
+    content: "⭐️ ";
+    color: gold;
+}
+.container h1::after{
+    content: " ⭐️";
+    color: gold;
+}
+
+/* PSEUDO ELEMENTI - parti di testo*/
+.articolo p::first-line{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.articolo p::first-letter{
+    font-size: 3em;
+    float: left;
+}
+
+/* SELEZIONE UTENTE*/
+::selection{
+    background: yellow;
+    color: black;
+}
+ 
